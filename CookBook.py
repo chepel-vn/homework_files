@@ -105,7 +105,7 @@ def main():
   while True:
     print(info_string)
     try:
-      dish_numbers = set(int(dish) for dish in input(f"Введите номера блюд через запятую, для которых хотите составить список продуктов для закупки (Пример: 1,3): ").split(","))
+      dish_numbers = [int(dish) for dish in input(f"Введите номера блюд через запятую, для которых хотите составить список продуктов для закупки (Пример: 1,3): ").split(",")]
     except ValueError:
       print("Введена некорректная информация. ")
       continue
